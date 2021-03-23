@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   resources :favorite_recipes
   resources :recipes
   resources :users
