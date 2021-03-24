@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
     before_action :find_recipe, only: [:show, :destroy, :update]
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
     
     def index
         recipes = Recipe.all 
