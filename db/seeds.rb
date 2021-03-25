@@ -9,7 +9,6 @@ Recipe.destroy_all
 User.destroy_all
 FavoriteRecipe.destroy_all
 
-
 user1 = User.create!(name: 'Cathy', username:'catd825', password_digest: 'password', bio: 'i love to cook!!')
 user2 = User.create!(name: 'David', username:'ddubbs87', password_digest: 'password', bio: 'i dont love to cook!!')
 user3 = User.create!(name: 'Mom', username:'Nonna1956', password_digest: 'password', bio: 'i <3 italian food')
