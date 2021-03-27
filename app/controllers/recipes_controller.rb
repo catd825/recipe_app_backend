@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
     end
 
     def create
+        # byebug
         recipe = Recipe.create(recipe_params)
         # recipe = current_user.recipes.create(recipe_params)
         if recipe.valid?
@@ -39,7 +40,7 @@ class RecipesController < ApplicationController
     private 
 
     def recipe_params
-        params.require(:recipe).permit(:title, :ingredients, :instructions, :img_url) 
+        params.require(:recipe).permit(:title, :ingredients, :instructions, :img_url, :recipe_creator_id, :description) 
     end
 
     def find_recipe

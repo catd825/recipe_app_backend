@@ -17,6 +17,6 @@ recipe1 = Recipe.create!(title: 'pasta', description: 'basic pasta recipe', ingr
 recipe2 = Recipe.create!(title: 'pizza', description: 'pizza pizza', ingredients: 'dough, pizza sauce, cheese', instructions: 'bake!', img_url: 'https://relish.com/cdn-cgi/image/fit=cover,f=auto,dpr=2,w=254,h=330/https://cookieandkate.com/images/2018/10/greek-pizza-recipe-2.jpg', recipe_creator_id: user3.id)
 recipe3 = Recipe.create!(title: 'sauce', description: 'best marinara!', ingredients: 'canned tomato, olive oil, oregano', instructions: 'simmer for hours!', img_url: 'https://relish.com/cdn-cgi/image/fit=cover,f=auto,dpr=2,w=254,h=330/https://www.seriouseats.com/recipes/images/2011/08/20110814-166086-marinara.jpg', recipe_creator_id: user3.id)
 
-FavoriteRecipe.create!(recipe_liker_id: user2.id, recipe_id: recipe2.id, favorited: true)
-FavoriteRecipe.create!(recipe_liker_id: user1.id, recipe_id: recipe2.id, favorited: true)
-FavoriteRecipe.create!(recipe_liker_id: user1.id, recipe_id: recipe3.id, favorited: true)
+FavoriteRecipe.create!(recipe_liker_id: user2.id, recipe_id: recipe2.id, recipe_name: recipe2.title, recipe_img: recipe2.img_url, favorited: true)
+FavoriteRecipe.create!(recipe_liker_id: user1.id, recipe_id: recipe2.id, recipe_name: recipe2.title, recipe_img: recipe2.img_url, favorited: true)
+FavoriteRecipe.create!(recipe_liker_id: user1.id, recipe_id: recipe3.id, recipe_name: recipe3.title, recipe_img: recipe3.img_url, favorited: true)
