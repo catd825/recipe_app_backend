@@ -13,7 +13,8 @@ class RecipesController < ApplicationController
     end
 
     def create
-        recipe = current_user.recipes.create(recipe_params)
+        recipe = Recipe.create(recipe_params)
+        # recipe = current_user.recipes.create(recipe_params)
         if recipe.valid?
             render json: recipe.to_json, status: :created
         else

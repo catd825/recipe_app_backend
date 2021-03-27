@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
     # prevents asking users to log in before they have created an account
-    skip_before_action :authorized, only: [:create]
+    # skip_before_action :authorized, only: [:create]
     # fixes 422 error
     # skip_before_action :verify_authenticity_token
     
