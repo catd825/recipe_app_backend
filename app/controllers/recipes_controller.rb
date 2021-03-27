@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-
     before_action :find_recipe, only: [:show, :destroy, :update]
     # skip_before_action :verify_authenticity_token
     
@@ -10,6 +9,7 @@ class RecipesController < ApplicationController
 
     def show
         find_recipe
+        render json: @recipe.to_json
     end
 
     def create
@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
     end
 
     def find_recipe
-        @recipe = recipe.find(params[:id])
+        @recipe = Recipe.find(params[:id])
     end
 
 end
