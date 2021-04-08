@@ -26,7 +26,8 @@ class RecipesController < ApplicationController
     def update
         @recipe.update(recipe_params)
         if @recipe.valid?
-            render json: current_user.recipes.to_json
+            render json: @recipe.to_json
+            # render json: current_user.recipes.to_json
         else
             render json: { error: 'failed to edit recipe' }, status: :not_acceptable
         end
