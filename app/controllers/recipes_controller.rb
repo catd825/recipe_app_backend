@@ -35,7 +35,8 @@ class RecipesController < ApplicationController
 
     def destroy 
         @recipe.destroy
-        render json: current_user.recipes.to_json
+        render json: @recipes.to_json
+        # render json: current_user.recipes.to_json
     end
 
     private 
