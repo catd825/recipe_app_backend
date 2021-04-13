@@ -16,12 +16,8 @@ user3 = User.create!(name: 'Mom', username:'Nonna1956', password_digest: 'passwo
 recipe1 = Recipe.create!(title: 'pasta', description: 'basic pasta recipe', ingredients: '1 lb of pasta', instructions: 'boi l water, add pasta, cook for 8 min, then drain, add toppings, and serve', img_url: 'https://pinchofyum.com/wp-content/uploads/Vegan-Vodka-Pasta-Square.jpg', recipe_creator_id: user3.id)
 recipe2 = Recipe.create!(title: 'pizza', description: 'pizza pizza', ingredients: 'dough, pizza sauce, cheese', instructions: 'bake!', img_url: 'https://relish.com/cdn-cgi/image/fit=cover,f=auto,dpr=2,w=254,h=330/https://cookieandkate.com/images/2018/10/greek-pizza-recipe-2.jpg', recipe_creator_id: user3.id)
 recipe3 = Recipe.create!(title: 'sauce', description: 'best marinara!', ingredients: 'canned tomato, olive oil, oregano', instructions: 'simmer for hours!', img_url: 'https://relish.com/cdn-cgi/image/fit=cover,f=auto,dpr=2,w=254,h=330/https://www.seriouseats.com/recipes/images/2011/08/20110814-166086-marinara.jpg', recipe_creator_id: user3.id)
-
 recipe4 = Recipe.create!(title: 'pasta al limone', description: '"easy and delicious!"', ingredients: 'pasta lemon cheese', instructions: 'boil pasta add lemon and cheese', img_url: 'https://assets.bonappetit.com/photos/5b9a901947aaaf7cd9ea90f2/1:1/w_2560%2Cc_limit/ba-recipe-pasta-al-limone.jpg', recipe_creator_id: user2.id)
-
 recipe5 = Recipe.create!(title: 'baked ziti', description: 'amazing baked ziti!', ingredients: 'pasta sauce cheese', instructions: 'bake', img_url: 'https://cdn.loveandlemons.com/wp-content/uploads/2019/12/baked-ziti.jpg', recipe_creator_id: user2.id)
-
-
 
 FavoriteRecipe.create!(recipe_liker_id: user2.id, recipe_id: recipe2.id, recipe_name: recipe2.title, recipe_img: recipe2.img_url, favorited: true)
 FavoriteRecipe.create!(recipe_liker_id: user1.id, recipe_id: recipe2.id, recipe_name: recipe2.title, recipe_img: recipe2.img_url, favorited: true)
