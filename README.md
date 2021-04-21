@@ -1,6 +1,6 @@
 **recipeTracker**
 
-A simple way to create and modify monthly budgets and transactions.
+Social app to create, save, and view recipes
 
 **Backend Prerequisites**
 Ruby on Rails
