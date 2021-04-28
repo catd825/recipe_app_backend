@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   resources :favorite_recipes
   resources :recipes
   namespace :api do
