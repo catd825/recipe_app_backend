@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'api/v1/users/:id/favorite_recipes', to: 'api/v1/users#retrieve_favorite_recipes'
+  get 'api/v1/users/:id/recipes', to: 'api/v1/users#retrieve_recipes'
+
   resources :favorite_recipes
   resources :recipes
   namespace :api do
